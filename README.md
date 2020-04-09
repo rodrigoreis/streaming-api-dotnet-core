@@ -1,2 +1,6 @@
 # streaming-api-dotnet-core
-realtime streaming api example
+## proposal
+demonstrates an realtime stream API from scratch using dotnet core
+
+## dependencies
+- netcoreapp3.1
