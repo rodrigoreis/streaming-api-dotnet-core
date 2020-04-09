@@ -10,13 +10,13 @@ demonstrates a realtime stream API from scratch using dotnet core
 open the URL below:
 
 ```
-https://localhost:5001/api/streamMessage/streaming
+https://localhost:5001/api/streaming
 ```
 
 Make a POST or PUT request and see the URL opened above
 
 ```shell
-curl --location --request POST 'https://localhost:5001/api/streamMessage' \
+curl --location --request POST 'https://localhost:5001/api/streaming' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"id":"1",
@@ -25,7 +25,7 @@ curl --location --request POST 'https://localhost:5001/api/streamMessage' \
 ```
 
 ```shell
-curl --location --request PUT 'https://localhost:5001/api/streamMessage' \
+curl --location --request PUT 'https://localhost:5001/api/streaming' \
 --header 'Content-Type: application/json' \
 --data-raw '{
 	"id":"1",

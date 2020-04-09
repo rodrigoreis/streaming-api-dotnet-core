@@ -13,11 +13,11 @@ namespace StreamingApiExample.Controllers
     [Route("api/[controller]")]
     [Produces("application/json")]
     [ApiController]
-    public class StreamMessageController : ControllerBase
+    public class StreamingController : ControllerBase
     {
         private static ConcurrentBag<StreamWriter> _clients;
 
-        static StreamMessageController()
+        static StreamingController()
         {
             _clients = new ConcurrentBag<StreamWriter>();
         }
@@ -40,8 +40,7 @@ namespace StreamingApiExample.Controllers
         }
 
         [HttpGet]
-        [Route("Streaming")]
-        public IActionResult Stream()
+        public IActionResult Get()
         {
             return new PushStreamResult(OnStream, "text/event-stream", HttpContext.RequestAborted);
         }
